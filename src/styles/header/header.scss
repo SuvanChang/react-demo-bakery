@@ -1,0 +1,130 @@
+
+/*添加字体Start*/
+@font-face{
+	font-family: "mailbox";
+	src:url(../fonts/icons/mailbox/iconfont.eot) format("embedded-opentype"),
+      url(../fonts/icons/mailbox/iconfont.svg) format("svg"),
+      url(../fonts/icons/mailbox/iconfont.ttf) format("truetype"),
+      url(../fonts/icons/mailbox/iconfont.woff) format("woff");
+}
+@font-face{
+  font-family: "dropmenu";
+  src:url(../fonts/icons/dropmenu/iconfont.eot) format("embedded-opentype"),
+      url(../fonts/icons/dropmenu/iconfont.svg) format("svg"),
+      url(../fonts/icons/dropmenu/iconfont.ttf) format("truetype"),
+      url(../fonts/icons/dropmenu/iconfont.woff) format("woff");
+}
+@font-face{
+  font-family: "plus";
+  src:url(../fonts/icons/plus/iconfont.eot) format("embedded-opentype"),
+      url(../fonts/icons/plus/iconfont.svg) format("svg"),
+      url(../fonts/icons/plus/iconfont.ttf) format("truetype"),
+      url(../fonts/icons/plus/iconfont.woff) format("woff");
+}
+/*添加字体End*/
+
+$height:50px;
+$fontSize:26px;
+$mailboxSize:24px;
+
+header{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  margin: 0 auto;
+
+  width: 100%;
+  height: $height;
+
+  color: #fff;
+
+  background-color: #FA8072;
+
+}
+/*清除header浮动*/
+header::after{
+  content: '';
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+/*中心标题Start*/
+header h2{
+    float: left;
+    width: 60%;
+    line-height: $height;
+    letter-spacing: 5px;
+    font:{
+      family:"微软雅黑";
+      size:$fontSize;
+      weight:normal; 
+    };
+    text-align: center;
+  }
+/*中心标题End*/
+
+/*信封组件Start*/
+.mailboxContain{
+  float: left;
+
+  width: 20%;
+
+  text-align: center;
+  line-height: $height;
+
+  font-family:"mailbox" !important;
+  font-size:$mailboxSize;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+ .mailbox{
+    position: relative;
+
+   .tipsMes{
+    position: absolute;
+    left: -3px;
+    top: 3px;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: red;
+    
+    border-radius: 50%;
+  }
+}
+.mailbox::after{
+  content: "\e611"
+}
+
+}
+/*信封组件End*/
+
+/*右侧下拉菜单Start*/
+.dropmenuContain{
+  float: left;
+  width: 20%;
+
+  .dropmenu{
+    line-height: $height;
+    padding-left: 20px;
+    font-family:"dropmenu" !important;
+    font-size:$fontSize;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .dropmenu::after{
+    content: "\ed31"
+  }
+  .plus{
+    @extend .dropmenu;
+    font-family:"plus" !important;
+  }
+  .plus::after{
+    content: "\e621"
+  }
+}
+/*右侧下拉菜单End*/

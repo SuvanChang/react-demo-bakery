@@ -1,0 +1,41 @@
+.content > figure{
+	display: inline-block;
+	padding: 5px;
+
+	width: 50%;
+	max-height: 280px;
+
+	color: #666;
+
+	overflow: hidden;
+
+	font:{
+		family:"微软雅黑";
+		size: "16px"
+	};
+
+	border:3px solid transparent;
+	
+	img{
+		width: 100%;
+		height: 150px;
+		margin:0 1px;
+		border:1px solid #ccc;
+		border-radius: 10px;
+	}
+	h3{
+		margin: 5px 0;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 0 4px;
+	}
+	p{
+		font-size: 14px;
+		padding: 0 4px;
+		display: -webkit-box;
+		overflow : hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+}

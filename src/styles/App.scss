@@ -1,0 +1,38 @@
+/* Base Application Styles */
+@import './header/header.scss';
+@import './footer/footer.scss';
+@import './carousel/bootstrap.css';
+@import './freecoms/freeComA.scss';
+@import './content/content.scss';
+@import './content/contentbox.scss';
+@import './club/club.scss';
+@import './my/my.scss';
+
+body,h1,h2,h3,h4,h5,h6{margin: 0}
+html,body{font-size: 16px;}
+a{text-decoration: none;}
+a:visited{color: #333;text-decoration: none;}
+a:focus{color: #b4b4b4;}
+
+
+.index{
+	overflow: auto;
+	margin-top: 50px;
+	margin-bottom: 70px;
+}
+.club{
+	margin-top: 50px;
+	margin-bottom: 70px;
+}
+.myindex{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 50px;
+	margin-bottom: 70px;
+	background-color: #FFBBFF;
+}
+#mailbox{text-decoration: none;}
+#mailbox:visited{
+	color: #fff;text-decoration: none;
+}
+#mailbox:focus{color: #fff;}
